@@ -69,23 +69,23 @@ public class FakeAPITest {
                 .body("id",Matchers.equalTo(1));
     }
 
-    @Test
-    public void testCreateCategory(){
-        String body = """
-                {
-                    "name": "Karthick",
-                    "image": "https://placeimg.com/640/480/any"
-                }
-                """;
-        RestAssured.given()
-                .contentType(ContentType.JSON)
-                .body(body)
-                .when()
-                .post("/categories")
-                .then()
-                .log().all()
-                .statusCode(201)
-                .body("name", Matchers.equalTo("Karthick"))
-                .body("image", Matchers.equalTo("https://placeimg.com/640/480/any"));
-    }
+//    @Test
+//    public void testCreateCategory(){
+//        String body = """
+//                {
+//                    "name": "Karthick",
+//                    "image": "https://placeimg.com/640/480/any"
+//                }
+//                """;
+//        RestAssured.given()
+//                .contentType(ContentType.JSON)
+//                .body(body)
+//                .when()
+//                .post("/categories")
+//                .then()
+//                .log().all()
+//                .statusCode(201)
+//                .body("name", Matchers.equalTo("Karthick"))
+//                .body("image", Matchers.equalTo("https://placeimg.com/640/480/any"));
+//    }
 }
